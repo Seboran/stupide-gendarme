@@ -1,4 +1,5 @@
-// ==UserScript==
+
+=======
 // @name         Stupide Gendarme
 // @namespace    http://tampermonkey.net/
 // @version      0.1
@@ -11,7 +12,9 @@
 (function() {
     'use strict';
 	alert("Hello world blbl");
+  alert('blbl');
 	var limite = 3;
 	
     // Your code here...
 })();
+
