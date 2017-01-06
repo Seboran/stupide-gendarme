@@ -1,15 +1,9 @@
 // ==UserScript==
-// @name         Stupide Gendarme
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Parler sur messenger de façon automatisée ET intelligente
-// @author       Nirina Guillaume Stéphane
-// @match        http://*/*
-// @grant        none
+// @name        BlblBot
+// @description Don't spend your day bullshitting on facebook, this bot do it for you
+// @include     https://www.messenger.com/*
+// @version     0.1
+// @grant       none
 // ==/UserScript==
 
-(function() {
-    'use strict';
-	alert("Hello world blbl");
-    // Your code here...
-})();
+alert('blbl');
