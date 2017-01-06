@@ -1,9 +1,20 @@
-// ==UserScript==
-// @name        BlblBot
-// @description Don't spend your day bullshitting on facebook, this bot do it for you
-// @include     https://www.messenger.com/t/1239124672796689
-// @version     0.1
-// @grant       none
+
+=======
+// @name         Stupide Gendarme
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Parler sur messenger de façon automatisée ET intelligente
+// @author       Nirina Guillaume Stéphane
+// @match        https://www.messenger.com
+// @grant        none
 // ==/UserScript==
 
-alert('blbl');
+(function() {
+    'use strict';
+	alert("Hello world blbl");
+  alert('blbl');
+	var limite = 3;
+	
+    // Your code here...
+})();
+
