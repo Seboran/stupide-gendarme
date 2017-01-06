@@ -10,6 +10,6 @@
 
 (function() {
     'use strict';
-
+	alert("Hello world blbl");
     // Your code here...
 })();
