@@ -21,17 +21,18 @@ function getBlockMessages(block)
     return block.getElementsByClassName('_58nk');
 }
 
-
-var blocks=getMessageBlocks();
-
-var text='';
-
-for (i = 0 ; i < blocks.length ; i++) 
+function printMessages()
 {
-    text = text + '\n' + getMessageBlockAuthor(blocks[i]) + ' a écrit:\n';
-    var messages = getBlockMessages(blocks[i]);
-    for(j = 0; j < messages.length; j++) {
-        text = text + messages[j].innerText + '\n';
+    var blocks=getMessageBlocks();
+    var text='';
+
+    for (i = 0 ; i < blocks.length ; i++) 
+    {
+        text = text + '\n' + getMessageBlockAuthor(blocks[i]) + ' a écrit:\n';
+        var messages = getBlockMessages(blocks[i]);
+        for(j = 0; j < messages.length; j++) {
+            text = text + messages[j].innerText + '\n';
+        }
     }
 }
 
@@ -49,3 +50,4 @@ function getLastMessages() {
     return new Array(auth,mess);
 }
 
+window.onlad=printMessages();
