@@ -36,18 +36,26 @@ function printMessages()
     }
 }
 
-function getLastMessages() {
-    var blocks=getMessageBlocks();
-    var auth=[];
-    var mess=[];
-    for (i=0;i<blocks.length;i++) {
-        var messages=getBlockMessages(blocks[i]);
-        for(j=0;j<messages.length;j++) {
+function getLastMessages() 
+{
+    var blocks = getMessageBlocks();
+    var auth = [];
+    var mess = [];
+    for (i=0; i < blocks.length; i++) {
+        var messages = getBlockMessages(blocks[i]);
+        for(j=0; j < messages.length; j++) {
             auth.push(getMessageBlockAuthor(blocks[i]));
             mess.push(messages[j].innerText);
         }
     }
-    return new Array(auth,mess);
+    return new Array(auth, mess);
 }
 
-window.onlad=printMessages();
+
+function getLastMessage()
+{
+	var last = getLastMessages();
+	var auths = last[0];
+	var messs = last[1];
+	return new Array(auths[auths.length - 1], messs[messs.length - 1]);
+}
