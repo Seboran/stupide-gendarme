@@ -15,13 +15,13 @@ function getMessageBlockAuthor(block) {
 }
 
 function getBlockMessages(block) {
-    return block.getElementsByTagName('div');
+    return block.getElementsByClassName('_58nk');
 }
 
 var blocks=getMessageBlocks();
 var text='';
 for (i=0;i<blocks.length;i++) {
-    text=text+ getMessageBlockAuthor(blocks[i]) + ' a écrit:\n';
+    text=text+ '\n' + getMessageBlockAuthor(blocks[i]) + ' a écrit:\n';
     var messages=getBlockMessages(blocks[i]);
     for(j=0;j<messages.length;j++) {
         text=text + messages[j].innerText + '\n';
