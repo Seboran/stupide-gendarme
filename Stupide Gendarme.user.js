@@ -21,6 +21,7 @@ function getBlockMessages(block)
     return block.getElementsByClassName('_58nk');
 }
 
+
 var blocks=getMessageBlocks();
 
 var text='';
@@ -33,3 +34,18 @@ for (i = 0 ; i < blocks.length ; i++)
         text = text + messages[j].innerText + '\n';
     }
 }
+
+function getLastMessages() {
+    var blocks=getMessageBlocks();
+    var auth=[];
+    var mess=[];
+    for (i=0;i<blocks.length;i++) {
+        var messages=getBlockMessages(blocks[i]);
+        for(j=0;j<messages.length;j++) {
+            auth.push(getMessageBlockAuthor(blocks[i]));
+            mess.push(messages[j].innerText);
+        }
+    }
+    return new Array(auth,mess);
+}
+
