@@ -6,24 +6,30 @@
 // ==/UserScript==
 
 
-function getMessageBlocks() {
+function getMessageBlocks() 
+{
     return document.getElementsByClassName('_41ud');
 }
 
-function getMessageBlockAuthor(block) {
+function getMessageBlockAuthor(block) 
+{
     return block.getElementsByTagName('h5')[0].innerText;
 }
 
-function getBlockMessages(block) {
+function getBlockMessages(block) 
+{
     return block.getElementsByClassName('_58nk');
 }
 
 var blocks=getMessageBlocks();
+
 var text='';
-for (i=0;i<blocks.length;i++) {
-    text=text+ '\n' + getMessageBlockAuthor(blocks[i]) + ' a écrit:\n';
-    var messages=getBlockMessages(blocks[i]);
-    for(j=0;j<messages.length;j++) {
-        text=text + messages[j].innerText + '\n';
+
+for (i = 0 ; i < blocks.length ; i++) 
+{
+    text = text + '\n' + getMessageBlockAuthor(blocks[i]) + ' a écrit:\n';
+    var messages = getBlockMessages(blocks[i]);
+    for(j = 0; j < messages.length; j++) {
+        text = text + messages[j].innerText + '\n';
     }
 }
