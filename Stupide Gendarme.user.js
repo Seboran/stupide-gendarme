@@ -23,8 +23,8 @@ function getBlockMessages(block)
 
 function printMessages()
 {
-    var blocks=getMessageBlocks();
-    var text='';
+    var blocks = getMessageBlocks();
+    var text = '';
 
     for (i = 0 ; i < blocks.length ; i++) 
     {
@@ -58,4 +58,10 @@ function getLastMessage()
 	var auths = last[0];
 	var messs = last[1];
 	return new Array(auths[auths.length - 1], messs[messs.length - 1]);
+}
+
+function inLastMessage(word)
+{
+	return (getLastMessage()[1].search(word) != -1);
+	
 }
