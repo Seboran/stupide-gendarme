@@ -1,12 +1,10 @@
-// ==UserScript==
-// @name        Stupide Gendarme
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description Don't spend your day bullshitting on facebook, this bot do it for you
-// @author       You
-// @match        https://www.messenger.com/t/1239124672796689
-// @match        https://www.messenger.com/t/1684421825168594
-// @grant        none
+
+// @name        BlblBot
+// @description Don't spend your day bullshitting on facebook, this bot does it for you
+// @include     https://www.messenger.com/t/1239124672796689
+// @version     0.1
+// @grant       none
+
 // ==/UserScript==
 
 
